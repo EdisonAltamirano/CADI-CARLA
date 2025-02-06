@@ -65,6 +65,19 @@ This repository provides demos for different use cases. The demos can be used as
 ```
 
 Hitting <kbd>CTRL</kbd> + <kbd>C</kbd> twice stops a demo.
+pip install torch torchvision 
+To use CADI tutorial simulation, run the following script:
+
+```bash
+sudo make carla.up
+```
+
+To stop it run:
+```bash
+sudo make carla.down
+```
+
+
 
 ## Use Cases
 

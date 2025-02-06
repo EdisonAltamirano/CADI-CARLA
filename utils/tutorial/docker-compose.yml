@@ -34,15 +34,15 @@ services:
     # .. note that the host name is explictly set to the name of the carla-simulator Docker service!
 
   # starts rviz with a GUI window named 'ros-monitoring'
-  ros-monitoring:
-    extends:
-      file: ../components.yml
-      service: ros-monitoring
-    depends_on:
-      carla-simulator:
-        condition: service_healthy
-    volumes:
-      # you can mount custom rviz configs...
-      - *rviz-config-mount
-    # ...and then use them when starting up rviz with the -d flag
-    command: bash -ic 'rviz2 -d /config.rviz --ros-args -p use_sim_time:=true &> /dev/null'
+  # ros-monitoring:
+  #   extends:
+  #     file: ../components.yml
+  #     service: ros-monitoring
+  #   depends_on:
+  #     carla-simulator:
+  #       condition: service_healthy
+  #   volumes:
+  #     # you can mount custom rviz configs...
+  #     - *rviz-config-mount
+  #   # ...and then use them when starting up rviz with the -d flag
+  #   command: bash -ic 'rviz2 -d /config.rviz --ros-args -p use_sim_time:=true &> /dev/null'

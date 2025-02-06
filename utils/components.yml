@@ -31,12 +31,12 @@ services:
   ros-monitoring:
     extends:
       service: gpu-x11-service
-    image: rwthika/ros2-cuda:humble-desktop-full
+    image: rwthika/ros2-cuda:humble-ros-base-v24.11 #rwthika/ros2-cuda:humble-desktop-full
 
   ros-monitoring-offscreen:
     extends:
       service: gpu-service
-    image: rwthika/ros2-cuda:humble-desktop-full
+    image: rwthika/ros2-cuda:humble-ros-base-v24.11 #rwthika/ros2-cuda:humble-desktop-full
 
   gpu-service:
     deploy:
